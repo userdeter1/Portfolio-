@@ -13,12 +13,14 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hero-new.css">
 </head>
 
 <body>
@@ -71,7 +73,6 @@
             <div class="accent-switcher">
                 <button class="accent-btn active" data-accent="blue" aria-label="Blue accent"></button>
                 <button class="accent-btn" data-accent="teal" aria-label="Teal accent"></button>
-                <button class="accent-btn" data-accent="violet" aria-label="Violet accent"></button>
             </div>
 
             <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
@@ -85,73 +86,159 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="hero-greeting">
-                        <span class="wave">👋</span>
-                        <span>Hello, I'm</span>
+            <!-- Floating Elements Background -->
+            <div class="hero-floating-elements">
+                <div class="float-element float-1"></div>
+                <div class="float-element float-2"></div>
+                <div class="float-element float-3"></div>
+                <div class="float-element float-4"></div>
+            </div>
+
+            <div class="hero-wrapper">
+                <!-- Left Side - Main Content -->
+                <div class="hero-main">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">Available for opportunities</span>
                     </div>
+
                     <h1 class="hero-title">
-                        <span class="title-line">Dioubi</span>
-                        <span class="title-line">Issam</span>
+                        <span class="title-greeting">Hi, I'm</span>
+                        <span class="title-name">
+                            <span class="name-first">Dioubi</span>
+                            <span class="name-last">Issam</span>
+                        </span>
                     </h1>
-                    <p class="hero-subtitle" id="typewriter-text">Computer Science Engineer Student & AI Developer</p>
 
-                    <div class="hero-chips">
-                        <span class="chip">Data Analyst</span>
-                        <span class="chip">Algorithms</span>
-                        <span class="chip">ML Pipelines</span>
+                    <div class="hero-role">
+                        <span class="role-label">I am a</span>
+                        <div class="role-animated">
+                            <span class="role-text" id="typewriter-text">Computer Science Engineer Student & AI
+                                Developer</span>
+                        </div>
                     </div>
 
-                    <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary">
-                            <span>View Projects</span>
+                    <p class="hero-description">
+                        Building intelligent systems that bridge the gap between <strong>AI innovation</strong>
+                        and <strong>real-world impact</strong>. Specialized in machine learning, algorithms,
+                        and data-driven solutions.
+                    </p>
+
+                    <div class="hero-stats">
+                        <div class="stat-box">
+                            <div class="stat-number">1+</div>
+                            <div class="stat-label">Year Experience</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">2+</div>
+                            <div class="stat-label">Projects Done</div>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="hero-btn btn-primary">
+                            <span>View My Work</span>
                             <i data-lucide="arrow-right"></i>
                         </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <span>Get in Touch</span>
+                        <a href="#contact" class="hero-btn btn-outline">
+                            <span>Let's Talk</span>
+                            <i data-lucide="message-circle"></i>
                         </a>
+                    </div>
+
+                    <div class="hero-social">
+                        <span class="social-label">Follow me</span>
+                        <div class="social-links">
+                            <a href="https://github.com/userdeter1" target="_blank" rel="noopener" class="social-link">
+                                <i data-lucide="github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/issam-dioubi-b06b21345/" target="_blank" rel="noopener"
+                                class="social-link">
+                                <i data-lucide="linkedin"></i>
+                            </a>
+                            <a href="mailto:issamdiyou@gmail.com" class="social-link">
+                                <i data-lucide="mail"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- AI Abstract Card -->
+                <!-- Right Side - 3D Visual Card -->
                 <div class="hero-visual">
-                    <div class="ai-card">
-                        <div class="ai-card-glow"></div>
-                        <svg class="ai-graph" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="graphGrad" x1="0%" y1="100%" x2="0%" y2="0%">
-                                    <stop offset="0%" style="stop-color:var(--accent);stop-opacity:0" />
-                                    <stop offset="100%" style="stop-color:var(--accent);stop-opacity:0.3" />
-                                </linearGradient>
-                            </defs>
-                            <!-- Data visualization curve -->
-                            <path class="data-curve"
-                                d="M20,250 Q80,200 100,180 T180,120 T260,80 T340,60 L340,280 L20,280 Z"
-                                fill="url(#graphGrad)" stroke="var(--accent)" stroke-width="2" />
-                            <!-- Grid lines -->
-                            <line x1="20" y1="60" x2="380" y2="60" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
-                            <line x1="20" y1="120" x2="380" y2="120" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
-                            <line x1="20" y1="180" x2="380" y2="180" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
-                            <line x1="20" y1="240" x2="380" y2="240" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
-                            <!-- Data points -->
-                            <circle class="data-point" cx="100" cy="180" r="4" fill="var(--accent)" />
-                            <circle class="data-point" cx="180" cy="120" r="4" fill="var(--accent)" />
-                            <circle class="data-point" cx="260" cy="80" r="4" fill="var(--accent)" />
-                            <circle class="data-point" cx="340" cy="60" r="4" fill="var(--accent)" />
-                        </svg>
-                        <div class="ai-stats">
-                            <div class="stat-item">
-                                <span class="stat-value">98.7%</span>
-                                <span class="stat-label">Accuracy</span>
+                    <div class="visual-card">
+                        <div class="card-glow"></div>
+
+                        <!-- Animated Code Window -->
+                        <div class="code-window">
+                            <div class="window-header">
+                                <div class="window-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <span class="window-title">ai_model.py</span>
                             </div>
-                            <div class="stat-item">
-                                <span class="stat-value">0.03s</span>
-                                <span class="stat-label">Latency</span>
+                            <div class="window-content">
+                                <div class="code-line">
+                                    <span class="line-number">1</span>
+                                    <span class="code-text"><span class="keyword">import</span> tensorflow <span
+                                            class="keyword">as</span> tf</span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-number">2</span>
+                                    <span class="code-text"><span class="keyword">from</span> sklearn <span
+                                            class="keyword">import</span> metrics</span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-number">3</span>
+                                    <span class="code-text"></span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-number">4</span>
+                                    <span class="code-text"><span class="keyword">def</span> <span
+                                            class="function">train_model</span>():</span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-number">5</span>
+                                    <span class="code-text"> model = <span
+                                            class="function">build_network</span>()</span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="line-number">6</span>
+                                    <span class="code-text"> accuracy = <span class="number">98.7</span>%</span>
+                                </div>
+                                <div class="code-line typing">
+                                    <span class="line-number">7</span>
+                                    <span class="code-text"> <span class="keyword">return</span> model</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tech Stack Icons -->
+                        <div class="tech-icons">
+                            <div class="tech-icon" style="--delay: 0s">
+                                <span>Python</span>
+                            </div>
+                            <div class="tech-icon" style="--delay: 0.2s">
+                                <span>Java</span>
+                            </div>
+                            <div class="tech-icon" style="--delay: 0.4s">
+                                <span>ML</span>
+                            </div>
+                            <div class="tech-icon" style="--delay: 0.6s">
+                                <span>JS</span>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span class="scroll-text">Scroll to explore</span>
             </div>
         </div>
     </section>
